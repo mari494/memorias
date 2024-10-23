@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Memórias Morelli Mariana 3ºF</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- barra lateral/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">FECHAR</a> 
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MEMÓRIAS</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MOMENTOS</a>
+</nav>
+
+<!-- Menu superior em telas pequenas -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">MEMÓRIAS</span>
+  <img src="img/download.png" class="morelli">
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Efeito de sobreposição ao abrir a barra lateral em telas pequenas -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !CONTEÚDO DA PÁGINA! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Grade de fotos -->
+  <h4 class="subtitulos"><b>MEMÓRIAS MORELLI</b></h4>
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-quarter">
+      <img src="img/cigarro.png" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="img/cigarro2.png" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="img/cigarro3.png" style="width:100%" onclick="onClick(this)" alt="">
+   </div>
+    
+   <div class="w3-quarter">
+      <img src="img/brian.png" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="img/bruyan.png" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="img/nois.png" style="width:100%" onclick="onClick(this)" alt="">
+
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="img/camille.png" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="img/sorvete.png" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="img/sla.png" style="width:100%" onclick="onClick(this)" alt="">
+
+    </div>
+
+    <div class="w3-quarter">
+      <img src="img/rhuan.png" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="img/sla2.png" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="img/eu.png" style="width:100%" onclick="onClick(this)" alt="">
+    </div>
+  </div>
+
+ 
+  
+  <!-- Modal para imagens em tamanho real com um clique-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+ 
+  
+<!-- MOMENTOS  -->
+<div id="contact">
+  <h4 class="subtitulos"><b>MOMENTOS</b></h4>
+<div class="w3-row w3-grayscale-min">
+  
+  <div class="w3-quarter">
+    <img src="img/arasto.png" style="width:100%" onclick="onClick(this)" alt="">
+    <img src="img/careca.png" style="width:100%" onclick="onClick(this)" alt="">
+    <img src="img/elas.png" style="width:100%" onclick="onClick(this)" alt="">
+ </div>
+
+ <div class="w3-quarter">
+  <img src="img/obceno.png" style="width:100%" onclick="onClick(this)" alt="">
+  <img src="img/formanda.png" style="width:100%" onclick="onClick(this)" alt="">
+  <img src="img/engasgo.png" style="width:100%" onclick="onClick(this)" alt="">
+</div>
+
+<div class="w3-quarter">
+  <img src="img/volei.png" style="width:100%" onclick="onClick(this)" alt="">
+  <img src="img/amigues.png" style="width:100%" onclick="onClick(this)" alt="">
+  <img src="img/santana.png" style="width:100%" onclick="onClick(this)" alt="">
+  
+</div>
+<div class="w3-quarter">
+  <img src="img/dormindo.png" style="width:100%" onclick="onClick(this)" alt="">
+  <img src="img/formandas.png" style="width:100%" onclick="onClick(this)" alt="">
+  <img src="img/horas.png" style="width:100%" onclick="onClick(this)" alt="">
+  <img src="img/pablosentado.png" style="width:100%" onclick="onClick(this)" alt="">
+</div>
+
+<!-- Conteúdo da página final -->
+</div>
+
+<script>
+// Script para abrir e fechar a barra lateral
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Galeria de imagens modais
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+</script>
+
+<!-- Rodapé -->
+  <div class="copyright">
+  Colégio Estadual Padre Claudio Morelli 2024 Mariana. 
+  </div>  
+  
+</body>
+
+</html>

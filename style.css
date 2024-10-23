@@ -1,0 +1,19 @@
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 4rem;
+    color: #000000;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.subtitulos{
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+}
+
+.morelli{
+    width: 80px;
+    padding: 0 10px;
+}
